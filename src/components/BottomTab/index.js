@@ -1,28 +1,44 @@
+import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { Icon } from 'react-native-vector-icons/FontAwesome';
-import HomeScreen from '../HomeScreen';
-import ExploreScreen from '../ExploreScreen';
-import MenuScreen from '../MenuScreen';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Indicate from '../../pages/Indicate';
+import Explore from '../../pages/Explore';
+import Menu from '../../pages/Menu';
+import colors from '../../css/colors';
 
 const TabNavigator = createBottomTabNavigator(
   {
     Explore: {
-      screen: ExploreScreen,
+      screen: Explore,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <Icon name="eye" size={24} color={tintColor} />,
+      },
     },
-    Home: {
-      screen: HomeScreen,
+    Indicate: {
+      screen: Indicate,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <Icon name="user" size={24} color={tintColor} />,
+      },
     },
     Menu: {
-      screen: MenuScreen,
+      screen: Menu,
+      navigationOptions: {
+        tabBarIcon: ({ tintColor }) => <Icon name="bars" size={24} color={tintColor} />,
+      },
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Indicate',
     tabBarOptions: {
-      activeTintColor: '#eb6e3d',
+      activeTintColor: colors.emphasisText,
+      inactiveTintColor: colors.secondaryText,
+      style: {
+        borderTopColor: colors.white,
+      },
     },
   },
 );
+
 
 export default createAppContainer(TabNavigator);
