@@ -16,4 +16,5 @@ export default {
     end: '#FF8872',
   },
   white: '#FFF',
+  background: '#F5F5F3',
 };

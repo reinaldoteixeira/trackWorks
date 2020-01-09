@@ -9,13 +9,13 @@ import colors from '../../css/colors';
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Explore: {
+    Explorar: {
       screen: Explore,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="eye" size={24} color={tintColor} />,
       },
     },
-    Indicate: {
+    Indicar: {
       screen: Indicate,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="user" size={24} color={tintColor} />,
@@ -29,7 +29,7 @@ const TabNavigator = createBottomTabNavigator(
     },
   },
   {
-    initialRouteName: 'Indicate',
+    initialRouteName: 'Indicar',
     tabBarOptions: {
       activeTintColor: colors.emphasisText,
       inactiveTintColor: colors.secondaryText,
