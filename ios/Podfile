@@ -42,6 +42,8 @@ target 'trackWorks' do
 
   pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
   target 'trackWorksTests' do
     inherit! :search_paths
     # Pods for testing
