@@ -24,7 +24,6 @@ export default StyleSheet.create({
     fontSize: 25,
   },
   title2: {
-    fontWeight: 'bold',
     fontSize: 15,
     color: colors.emphasisText,
   },
