@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './styles';
-import ProgresBar from '../ProgressBar';
+import ProgressBar from '../ProgressBar';
 import colors from '../../css/colors';
 
 function getStepName(name) {
@@ -31,7 +31,7 @@ function Steps(props) {
         <Text style={styles.name}>{dateStart}</Text>
         <Text style={styles.name}>{percentage}%</Text>
       </View>
-      <ProgresBar
+      <ProgressBar
         percentage={percentage}
         colorStart={colors[step].start}
         colorEnd={colors[step].end}

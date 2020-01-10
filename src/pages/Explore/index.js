@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
+import colors from '../../css/colors';
 
 function Explore() {
   // eslint-disable-next-line no-console
@@ -8,7 +10,8 @@ function Explore() {
 
   return (
     <View style={styles.container}>
-      <Text> Explorar ? </Text>
+      <Icon name="exclamation-circle" size={50} color={colors.emphasisText} />
+      <Text> Em desenvolvimento...</Text>
     </View>
   );
 }
