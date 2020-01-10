@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -14,18 +15,30 @@ const TabNavigator = createBottomTabNavigator(
       screen: Explore,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="eye" size={24} color={tintColor} />,
+        tabBarOnPress: ({ navigation, defaultHandler }) => {
+          console.log('PAGINA', navigation.state.routeName);
+          defaultHandler();
+        },
       },
     },
     Indicar: {
       screen: Indicate,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="user" size={24} color={tintColor} />,
+        tabBarOnPress: ({ navigation, defaultHandler }) => {
+          console.log('PAGINA', navigation.state.routeName);
+          defaultHandler();
+        },
       },
     },
     Menu: {
       screen: Menu,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="bars" size={24} color={tintColor} />,
+        tabBarOnPress: ({ navigation, defaultHandler }) => {
+          console.log('PAGINA', navigation.state.routeName);
+          defaultHandler();
+        },
       },
     },
   },
