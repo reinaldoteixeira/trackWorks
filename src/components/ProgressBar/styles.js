@@ -1,13 +1,18 @@
 import { StyleSheet } from 'react-native';
+import colors from '../../css/colors';
 
 export default StyleSheet.create({
   rectangle: {
-    flex: 1,
+    marginTop: '3%',
+    height: 25,
+    borderRadius: 10,
+    zIndex: 1,
   },
-  gradient: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
+  default: {
+    height: 25,
+    borderRadius: 10,
+    width: '100%',
+    backgroundColor: colors.background,
+    marginTop: '-7%',
   },
 });

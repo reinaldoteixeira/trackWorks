@@ -1,20 +1,26 @@
 import React from 'react';
 import { View } from 'react-native';
-import { LinearGradient } from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
+import LinearGradient from 'react-native-linear-gradient';
 import styles from './styles';
 
 function ProgressBar(props) {
   const { percentage, colorStart, colorEnd } = props;
 
+  const width = {
+    width: `${percentage}%`,
+  };
+
   return (
-    <View style={styles.rectangle}>
-      <View style={{ backgroundColor: colorStart, flex: 1 }} />
+    <>
       <LinearGradient
-        colors={[colorEnd, 'transparent']}
-        style={[styles.gradient, { height: percentage }]}
+        style={[styles.rectangle, width]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        colors={[colorStart, colorEnd]}
       />
-    </View>
+      <View style={styles.default} />
+    </>
   );
 }
 

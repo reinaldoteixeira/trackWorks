@@ -7,4 +7,7 @@ export default StyleSheet.create({
     backgroundColor: colors.background,
     alignItems: 'center',
   },
+  scroll: {
+    alignItems: 'center',
+  },
 });
