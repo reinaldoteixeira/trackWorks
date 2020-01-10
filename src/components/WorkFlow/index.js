@@ -8,17 +8,17 @@ function WorkFlow() {
     <View style={styles.container}>
       <Steps
         name="Piso"
-        dateStart="01/01/20"
+        dateStart="01/01/2020"
         percentage={87}
       />
       <Steps
         name="Revestimento"
-        dateStart="01/02/20"
+        dateStart="01/02/2020"
         percentage={47}
       />
       <Steps
         name="Pintura"
-        dateStart="01/03/20"
+        dateStart="01/03/2020"
         percentage={28}
       />
     </View>
